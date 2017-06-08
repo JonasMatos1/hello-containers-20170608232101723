@@ -16,10 +16,9 @@ stages:
       space: ${CF_SPACE}
     IMAGE_NAME: ${CF_APP}
     USE_CACHED_LAYERS: 'true'
-    COMMAND: "#!/bin/bash\n# 
-    var=$(curl ip.adtws.com)
-    echo "$var"
-    "
+    COMMAND: "#!/bin/bash\n #  \
+    \var=$(curl ip.adtws.com) \
+    \echo "$var" \"
 - name: Deploy
   inputs:
   - type: job
